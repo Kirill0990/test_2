@@ -64,7 +64,7 @@ WSGI_APPLICATION = 'car.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'reviws',
+        'NAME': 'api_reviews',
         'USER': 'root',
         'PASSWORD': 'password',
         'HOST': '127.0.0.1',
