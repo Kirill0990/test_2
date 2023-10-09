@@ -3,12 +3,10 @@ from django.db import models
 
 class Country(models.Model):
     name = models.CharField(max_length=100)
-    slug = models.SlugField(unique=True)
 
 
 class Manufacturer(models.Model):
     name = models.CharField(max_length=100)
-    slug = models.SlugField(unique=True)
     country = models.ForeignKey(
         Country, on_delete=models.SET_NULL,
         related_name='manufacturers', blank=True, null=True

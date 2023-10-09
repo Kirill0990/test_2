@@ -3,29 +3,30 @@ from rest_framework import serializers
 from review.models import Country, Manufacturer, Car, Comment
 
 
-class CountrySerializers(serializers.Serializer):
+class CountrySerializers(serializers.ModelSerializer):
 
     class Meta():
         model = Country
-        field = ('id', 'name',)
+        fields = ('id', 'name', 'manufacturers')
 
 
-class ManufacturerSerializers(serializers.Serializer):
+class ManufacturerSerializers(serializers.ModelSerializer):
 
     class Meta():
         model = Manufacturer
-        field = ('id', 'name', 'slug', 'country',)
+        fields = ('id', 'name', 'country', 'cars', 'comments')
 
 
-class CarSerializers(serializers.Serializer):
+class CarSerializers(serializers.ModelSerializer):
 
     class Meta():
         model = Car
-        field = ('id', 'name', 'manufacture', 'start_year', 'end_year',)
+        fields = ('id', 'name', 'manufacturer',
+                  'start_year', 'end_year', )
 
 
-class CommentSerializers(serializers.Serializer):
+class CommentSerializers(serializers.ModelSerializer):
 
     class Meta():
         model = Comment
-        field = ('id', 'email', 'car', 'creation_date', 'comment',)
+        fields = ('id', 'email', 'car', 'creation_date', 'comment',)
