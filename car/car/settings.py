@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'djoser',
+    'rest_framework_simplejwt'
 ]
 
 MIDDLEWARE = [
@@ -64,7 +65,7 @@ WSGI_APPLICATION = 'car.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'api_reviews',
+        'NAME': 'reviws',
         'USER': 'root',
         'PASSWORD': 'password',
         'HOST': '127.0.0.1',
