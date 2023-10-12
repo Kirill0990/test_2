@@ -1,5 +1,3 @@
-from rest_framework import viewsets
-from rest_framework import permissions
 from datetime import datetime
 from openpyxl import Workbook
 from django.http import HttpResponse
@@ -70,8 +68,6 @@ def export_manufactures_to_xlsx(request):
         'id',
         'name',
         'country',
-        'start_year',
-        'end_year',
     ]
     row_num = 1
 
