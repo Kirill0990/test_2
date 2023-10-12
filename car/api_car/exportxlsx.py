@@ -93,6 +93,7 @@ def export_manufactures_to_xlsx(request):
 
     return response
 
+
 def export_car_to_xlsx(request):
 
     queryset = Car.objects.all()

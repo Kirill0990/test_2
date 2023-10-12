@@ -22,6 +22,7 @@ def export_country_csv(request):
 
     return response
 
+
 def export_manufacturer_csv(request):
     data = Manufacturer.objects.all()
 
@@ -41,6 +42,7 @@ def export_manufacturer_csv(request):
                          manufacturer.country,])
 
     return response
+
 
 def export_car_csv(request):
     data = Car.objects.all()
@@ -65,6 +67,7 @@ def export_car_csv(request):
                          car.end_year,])
 
     return response
+
 
 def export_comment_csv(request):
     data = Comment.objects.all()
