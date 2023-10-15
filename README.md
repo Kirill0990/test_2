@@ -11,18 +11,13 @@ python3 -m venv venv
 ```
 source venv/bin/activate
 ```
-Установите MySQL
-MacOS 
+Установить PostgreSQL
 ```
-brew install mysql pkg-config
-```
-Linux
-```
-sudo apt-get install mysql-client
+brew install postgresql
 ```
 Восстанавливаем базу данных из дампа
 ```
-mysql -u -p -f mydb < api_review.sql
+psql review < review.bak
 ```
 Установить зависимости из файла requirements.txt:
 ```
